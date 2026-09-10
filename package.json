@@ -2,7 +2,6 @@
   "name": "street-typical-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://sanamshubham.github.io/typical",
   "dependencies": {
     "lucide-react": "^0.263.1",
     "papaparse": "^5.7.0",
