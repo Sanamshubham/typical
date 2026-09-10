@@ -1,0 +1,6 @@
+Street Name,ROW,ROW TO BOC,BOC to BOC,BOC to S/W,S/W to S/W,BOC to W,BOC to EX TEL,BOC to CATV,BOC to GAS,BOC to SS,BOC to SD,BOC to RL,RW to RL,BOC to POWER,BOC to FIRE HYDRANT,Note
+Main Street,50,10,30,2,34,3,5,7,9,11,13,5,5,15,17,Standard section
+Oak Avenue (Overlap Error),50,10,30,2,34,3,3.2,7,9,11,13,5,5,15,17,Conflict between W and TEL
+Pine Street (Deviated RL No Note),50,10,30,2,34,3,5,7,9,11,13,4,4,15,17,
+Elm Road (Deviated RL With Note),50,10,30,2,34,3,5,7,9,11,13,4,4,15,17,Approved special setback variance
+Symmetry Error Blvd,60,10,30,2,34,3,5,7,9,11,13,5,5,15,17,Mismatched ROW setback calculation

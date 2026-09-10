@@ -1,0 +1,1146 @@
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.app-header {
+  height: 78px;
+  padding: 0 34px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e9f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #172033;
+  color: white;
+
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: #7b8495;
+  font-size: 12px;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #687386;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #26a269;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+
+/* ============================================================
+   UPLOAD PAGE
+   ============================================================ */
+
+.upload-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 24px 60px;
+}
+
+.hero {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 42px;
+}
+
+.hero-label,
+.dashboard-label {
+  display: inline-block;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: #59657a;
+
+  margin-bottom: 13px;
+}
+
+.hero h2 {
+  margin: 0;
+
+  font-size: 48px;
+  line-height: 1.05;
+
+  letter-spacing: -1.8px;
+}
+
+.hero p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  color: #727d90;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+}
+
+
+/* ============================================================
+   UPLOADER
+   ============================================================ */
+
+.uploader-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.drop-zone {
+  background: #ffffff;
+
+  border: 2px dashed #ccd3df;
+
+  border-radius: 18px;
+
+  min-height: 330px;
+
+  padding: 45px 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  transition: 0.2s ease;
+}
+
+.drop-zone.dragging {
+  border-color: #59657a;
+  background: #f8f9fc;
+}
+
+.upload-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.drop-zone h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.drop-zone p {
+  margin: 9px 0;
+  color: #7c8799;
+}
+
+.drop-zone > span {
+  font-size: 12px;
+  color: #9aa2b0;
+  margin-bottom: 14px;
+}
+
+.upload-button {
+  border: 0;
+  border-radius: 9px;
+
+  padding: 12px 21px;
+
+  background: #172033;
+  color: #ffffff;
+
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.upload-button:hover {
+  opacity: 0.9;
+}
+
+.upload-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.drop-zone small {
+  margin-top: 15px;
+  color: #99a1ae;
+}
+
+.upload-error {
+  margin-top: 14px;
+
+  padding: 13px 15px;
+
+  border-radius: 9px;
+
+  background: #fff0f0;
+  color: #b42318;
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   RULE PREVIEW
+   ============================================================ */
+
+.rules-preview {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 32px;
+}
+
+.rule-preview-card {
+  padding: 21px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6eaf0;
+
+  border-radius: 13px;
+}
+
+.rule-preview-card span {
+  font-size: 11px;
+  font-weight: 800;
+  color: #9ba4b3;
+}
+
+.rule-preview-card h3 {
+  margin: 9px 0 7px;
+  font-size: 15px;
+}
+
+.rule-preview-card p {
+  margin: 0;
+
+  color: #7c8798;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+
+.dashboard {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 35px 24px 55px;
+}
+
+.dashboard-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.dashboard-top h2 {
+  margin: 0;
+
+  font-size: 32px;
+
+  letter-spacing: -0.7px;
+}
+
+.dashboard-top p {
+  margin: 7px 0 0;
+
+  color: #7a8596;
+
+  font-size: 13px;
+}
+
+.reset-button {
+  border: 1px solid #d7dce5;
+
+  background: white;
+
+  color: #364052;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+.reset-button:hover {
+  background: #f7f8fa;
+}
+
+
+/* ============================================================
+   SUMMARY
+   ============================================================ */
+
+.summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.summary-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e9f0;
+
+  border-radius: 12px;
+
+  padding: 19px 21px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.summary-card span {
+  font-size: 12px;
+
+  color: #7c8798;
+}
+
+.summary-card strong {
+  font-size: 28px;
+}
+
+.summary-pass strong {
+  color: #218739;
+}
+
+.summary-fail strong {
+  color: #c62828;
+}
+
+.summary-warning strong {
+  color: #a56a00;
+}
+
+
+/* ============================================================
+   IMPORT INFO
+   ============================================================ */
+
+.import-info {
+  display: flex;
+
+  gap: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9f0;
+
+  border-radius: 11px;
+
+  padding: 14px 18px;
+
+  margin-bottom: 20px;
+}
+
+.import-info div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.import-info strong {
+  font-size: 16px;
+}
+
+.import-info span {
+  color: #7b8493;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.toolbar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+.city-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #697487;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.city-selector select {
+  height: 39px;
+  min-width: 130px;
+
+  border: 1px solid #dce1e8;
+  border-radius: 8px;
+  padding: 0 10px;
+
+  background: #ffffff;
+  color: #273143;
+  font-size: 12px;
+}
+
+.filters {
+  display: flex;
+
+  gap: 7px;
+}
+
+.filters button {
+  border: 1px solid #dce1e8;
+
+  background: #ffffff;
+
+  border-radius: 7px;
+
+  padding: 8px 13px;
+
+  color: #697487;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.filters button:hover {
+  background: #f7f8fa;
+}
+
+.filters button.filter-active {
+  background: #172033;
+
+  color: #ffffff;
+
+  border-color: #172033;
+}
+
+.search-box {
+  width: 280px;
+
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce1e8;
+
+  border-radius: 8px;
+
+  padding: 0 12px;
+}
+
+.search-box span {
+  font-size: 13px;
+}
+
+.search-box input {
+  border: 0;
+
+  outline: 0;
+
+  width: 100%;
+
+  color: #273143;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.table-wrapper {
+  background: #ffffff;
+
+  border: 1px solid #e3e7ee;
+
+  border-radius: 13px;
+
+  /*
+   * Horizontal scroll
+   * + Vertical scroll
+   */
+  overflow-x: auto;
+  overflow-y: auto;
+
+  /*
+   * Table ke andar scrolling area.
+   * Header isi area ke andar sticky rahega.
+   */
+  max-height: 65vh;
+
+  position: relative;
+}
+
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.results-table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  min-width: 1200px;
+
+  table-layout: fixed;
+}
+
+
+/* ============================================================
+   STICKY TABLE HEADER
+   ============================================================ */
+
+.results-table thead {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 30;
+}
+
+.results-table th {
+  background: #f8f9fb;
+
+  color: #687386;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+
+  font-weight: 800;
+
+  text-align: left;
+
+  padding: 13px 12px;
+
+  border-bottom: 1px solid #e5e9ef;
+
+  white-space: nowrap;
+
+  /*
+   * Sticky header
+   */
+  position: sticky;
+
+  top: 0;
+
+  z-index: 30;
+
+  /*
+   * Important:
+   * Header background opaque hona chahiye
+   */
+  background-clip: padding-box;
+
+  /*
+   * Scroll ke waqt header clearly visible rahe
+   */
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================================================
+   TABLE CELLS
+   ============================================================ */
+
+.results-table td {
+  padding: 14px 12px;
+
+  border-bottom: 1px solid #edf0f4;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  vertical-align: middle;
+
+  background: #ffffff;
+}
+
+.results-table tbody tr:hover {
+  background: #fbfcfd;
+}
+
+.results-table tbody tr:hover td {
+  background: #fbfcfd;
+}
+
+.results-table td strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.plat-text {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #929baa;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   COLUMN WIDTHS
+   ============================================================ */
+
+.results-table th:nth-child(1),
+.results-table td:nth-child(1) {
+  width: 18%;
+}
+
+.results-table th:nth-child(2),
+.results-table td:nth-child(2) {
+  width: 10%;
+}
+
+.results-table th:nth-child(3),
+.results-table td:nth-child(3) {
+  width: 10%;
+}
+
+.results-table th:nth-child(4),
+.results-table td:nth-child(4) {
+  width: 7%;
+}
+
+.results-table th:nth-child(5),
+.results-table td:nth-child(5) {
+  width: 9%;
+}
+
+.results-table th:nth-child(6),
+.results-table td:nth-child(6) {
+  width: 9%;
+}
+
+.results-table th:nth-child(7),
+.results-table td:nth-child(7) {
+  width: 9%;
+}
+
+.results-table th:nth-child(8),
+.results-table td:nth-child(8) {
+  width: 9%;
+}
+
+.results-table th:nth-child(9),
+.results-table td:nth-child(9) {
+  width: 8%;
+}
+
+.results-table th:nth-child(10),
+.results-table td:nth-child(10) {
+  width: 11%;
+}
+
+
+/* ============================================================
+   ID
+   ============================================================ */
+
+.id-badge {
+  display: inline-block;
+
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: #f0f2f6;
+
+  color: #485366;
+
+  font-family: monospace;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   USER
+   ============================================================ */
+
+.user-badge {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background: #eef1f5;
+
+  color: #3d4757;
+
+  font-weight: 700;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.status-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 70px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.status-pass {
+  background: #eaf7ed;
+
+  color: #217a34;
+}
+
+.status-fail {
+  background: #fdecec;
+
+  color: #b42318;
+}
+
+.status-warning {
+  background: #fff5dc;
+
+  color: #936100;
+}
+
+
+/* ============================================================
+   IQGEO BUTTON
+   ============================================================ */
+
+.iqgeo-button {
+  display: inline-block;
+
+  padding: 7px 10px;
+
+  border-radius: 7px;
+
+  background: #172033;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.iqgeo-button:hover {
+  opacity: 0.88;
+}
+
+.no-link {
+  color: #a1a8b4;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   ISSUES
+   ============================================================ */
+
+.issues-row td {
+  background: #fcfcfd;
+
+  padding-top: 5px;
+
+  padding-bottom: 8px;
+}
+
+.issues-container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.issue-item {
+  border-radius: 8px;
+
+  padding: 9px 11px;
+
+  border: 1px solid #e5e8ee;
+}
+
+.issue-error {
+  background: #fff7f7;
+
+  border-left: 3px solid #d92d20;
+}
+
+.issue-warning {
+  background: #fffaf0;
+
+  border-left: 3px solid #d99000;
+}
+
+.issue-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 4px;
+}
+
+.issue-header strong {
+  font-size: 11px !important;
+}
+
+.issue-header span {
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.issue-message {
+  color: #667085;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  white-space: normal;
+}
+
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+
+.utility-row td {
+  background: #fafbfd;
+
+  padding-top: 8px;
+
+  padding-bottom: 10px;
+}
+
+.utility-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  white-space: normal;
+}
+
+.utility-container > strong {
+  font-size: 10px;
+
+  color: #667085;
+
+  white-space: nowrap;
+}
+
+.utility-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.utility-chip {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 4px 7px;
+
+  border-radius: 6px;
+
+  background: #edf0f4;
+
+  color: #4b5565;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.utility-chip.utility-rl {
+  background: #e7edf7;
+
+  color: #344b70;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.empty-state {
+  text-align: center;
+
+  padding: 50px !important;
+
+  color: #8b94a3 !important;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.app-footer {
+  padding: 20px;
+
+  text-align: center;
+
+  color: #8992a1;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (
+  max-width: 1000px
+) {
+  .rules-preview {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .summary-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (
+  max-width: 700px
+) {
+  .app-header {
+    padding: 0 16px;
+  }
+
+  .header-status {
+    display: none;
+  }
+
+  .city-selector {
+    margin-left: auto;
+  }
+
+  .upload-page {
+    padding-top: 40px;
+  }
+
+  .hero h2 {
+    font-size: 37px;
+  }
+
+  .rules-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .import-info {
+    flex-wrap: wrap;
+
+    gap: 12px 22px;
+  }
+
+  .toolbar {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .city-selector {
+    justify-content: space-between;
+  }
+
+  .city-selector select {
+    flex: 1;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  /*
+   * Mobile par table ki height
+   */
+  .table-wrapper {
+    max-height: 70vh;
+  }
+}
